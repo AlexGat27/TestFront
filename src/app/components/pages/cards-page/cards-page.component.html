@@ -1,1 +1,7 @@
-<p>cards-page works!</p>
+<div #container style="width: 100%; padding-top: 100px; height: 90%; overflow: auto;">
+    <button (click)="scrollLeft()" class="leftbtn">&lt;</button>
+    <div class="container">
+        <div *ngFor="let _ of range; let i = index;" class="item"></div>
+    </div>
+    <button (click)="scrollRight()" class="rightbtn">&gt;</button>
+</div>

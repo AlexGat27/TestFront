@@ -1,39 +1,32 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { fullpageApi, fullpageOptions } from 'fullpage.js/dist/fullpage.extensions.min';
+import { ScrollService } from '../../../services/scroll.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrl: './content.component.css'
 })
-export class ContentComponent {
+export class ContentComponent implements AfterViewInit{
   config: fullpageOptions;
   fullpageApi!: fullpageApi;
 
-  constructor(){
+  constructor(private scrollService: ScrollService){
     this.config = {
-      anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+      anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastPage'],
       menu: '#menu',
       scrollOverflow: true,
-      sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+      sectionsColor: ['#ffffff', '#000000', '#ffffff', '#1d1d1d'],
       credits: {
         enabled: false,
-      },
-
-      // events callback
-      afterLoad: (origin, destination, direction) => {
-        console.log(destination);
-      },
-      afterRender: () => {
-        console.log('afterRender');
-      },
-      afterResize: (width, height) => {
-        console.log('afterResize' + width + ' ' + height);
-      },
-      afterSlideLoad: (section, origin, destination, direction) => {
-        console.log(destination);
       }
     };
+  }
+  ngAfterViewInit(): void {
+    this.scrollService.$scrollTop.subscribe(() =>{
+      this.fullpageApi.moveTo(1);
+    })
   }
   getRef(fullPageRef: fullpageApi) {
     this.fullpageApi = fullPageRef;

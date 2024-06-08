@@ -10,6 +10,7 @@ import { CatsSubstratePageComponent } from './components/pages/cats-substrate-pa
 import { FooterPageComponent } from './components/pages/footer-page/footer-page.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component';
 import { ContentComponent } from './components/shared/content/content.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ContentComponent } from './components/shared/content/content.component'
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     AngularFullpageModule
   ],

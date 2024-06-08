@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { ScrollService } from '../../../services/scroll.service';
 declare var fullpage: any;
 
 @Component({
@@ -7,5 +8,9 @@ declare var fullpage: any;
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
-  constructor(){}
+  constructor(private scrollService: ScrollService){}
+
+  scrollTop(){
+    this.scrollService.sendEvent();
+  }
 }
