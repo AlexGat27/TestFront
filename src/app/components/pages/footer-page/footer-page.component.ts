@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './footer-page.component.css'
 })
 export class FooterPageComponent {
-
+  range: undefined[] = Array.from({ length: 20 });
 }

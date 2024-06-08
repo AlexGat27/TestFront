@@ -1,0 +1,8 @@
+.item {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: rgb(215, 215, 215);
+}
