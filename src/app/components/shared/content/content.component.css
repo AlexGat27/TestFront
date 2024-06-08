@@ -1,0 +1,19 @@
+.app-section{
+    position: absolute; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    width: 390px;
+    height: 390px;
+    border-radius: 50%;
+    background-color: #323232;
+    left: -92px; /* Сдвигаем элемент на 50px влево относительно левого края родителя */
+    top: -130px; /* Выравниваем элемент по вертикали */
+    transform: translate(-50% -50%); /* Корректируем позиционирование по вертикали */
+    z-index: 1001;
+  }

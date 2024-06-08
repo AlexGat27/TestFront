@@ -1,13 +1,17 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ScrollService } from '../../../services/scroll.service';
 
 @Component({
   selector: 'app-cards-page',
   templateUrl: './cards-page.component.html',
   styleUrl: './cards-page.component.css'
 })
-export class CardsPageComponent {
+export class CardsPageComponent{
   range: undefined[] = Array.from({ length: 20 });
   @ViewChild('container', { read: ElementRef }) container!: ElementRef;
+
+  constructor(private scrollService: ScrollService){
+  }
 
   scrollLeft() {
     const container: HTMLDivElement = this.container.nativeElement;
@@ -23,5 +27,9 @@ export class CardsPageComponent {
       left: container.scrollLeft + container.clientWidth / 2,
       behavior: 'smooth'
     });
+  }
+
+  moveBottom(){
+    this.scrollService.scrollBottom();
   }
 }

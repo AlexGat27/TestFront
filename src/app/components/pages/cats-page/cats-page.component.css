@@ -1,0 +1,12 @@
+.description{
+    color: white;
+    font-family: 'Roboto';
+    width: 30%;
+}
+
+.img-cats{
+    width: 55%;
+}
+.img-cats img{
+    position: absolute;
+}

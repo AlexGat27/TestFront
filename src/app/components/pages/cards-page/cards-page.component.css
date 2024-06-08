@@ -14,7 +14,7 @@
     height: 90%;
     margin-left: 20px;
 }
-button{
+.leftbtn, .rightbtn{
   position: absolute;
   top: 32%;
   border-radius: 50%;
@@ -34,4 +34,18 @@ button{
 }
 .rightbtn{
   right: 2%;
+}
+.bottombtn{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 250px;
+    height: 7%;
+    border: 5px solid rgba(158, 158, 158, 0.5);
+    border-radius: 20px;
+    transform: translateX(-50%);
+    font-family: 'Roboto';
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
 }

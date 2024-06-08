@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
 export class ContentComponent implements AfterViewInit{
   config: fullpageOptions;
   fullpageApi!: fullpageApi;
+  countSections: number = 4;
 
   constructor(private scrollService: ScrollService){
     this.config = {
@@ -24,8 +25,18 @@ export class ContentComponent implements AfterViewInit{
     };
   }
   ngAfterViewInit(): void {
-    this.scrollService.$scrollTop.subscribe(() =>{
-      this.fullpageApi.moveTo(1);
+    this.scrollService.$scrollTop.subscribe(direction =>{
+      switch(direction){
+        case "top":
+          this.fullpageApi.moveTo(1);
+          break;
+        case "bottom":
+          this.fullpageApi.moveTo(this.countSections);
+          break;
+        default:
+          console.error("Такой команды нет");
+          break;
+      }
     })
   }
   getRef(fullPageRef: fullpageApi) {

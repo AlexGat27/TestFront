@@ -11,6 +11,6 @@ export class NavigationComponent {
   constructor(private scrollService: ScrollService){}
 
   scrollTop(){
-    this.scrollService.sendEvent();
+    this.scrollService.scrollTop();
   }
 }

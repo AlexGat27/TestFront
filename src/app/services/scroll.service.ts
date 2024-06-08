@@ -5,10 +5,13 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ScrollService {
-  private scrollTopSubject = new BehaviorSubject<null>(null);
+  private scrollTopSubject = new BehaviorSubject<string>("");
   $scrollTop = this.scrollTopSubject.asObservable();
 
-  sendEvent(){
-    this.scrollTopSubject.next(null);
+  scrollTop(){
+    this.scrollTopSubject.next("top");
+  }
+  scrollBottom(){
+    this.scrollTopSubject.next("bottom");
   }
 }
