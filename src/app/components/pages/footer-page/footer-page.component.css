@@ -6,3 +6,24 @@
     margin-right: 25px;
     background-color: rgb(215, 215, 215);
 }
+.circlesBottom{
+    position: absolute; width: 95%; height: 17%; bottom: 10px; left: 50%; 
+    transform: translateX(-50%); overflow: hidden; display: flex; flex-direction: column; justify-content: space-around;
+}
+.circlesBottom p{
+    color: white; font-family: 'Roboto'; font-size: 25px; margin: 0;
+}
+
+@media(max-width: 768px){
+    .circlesBottom{
+        height: 20%;
+    }
+}
+@media(max-width: 480px){
+    .circlesBottom{
+        height: 25%;
+    }
+    .circlesBottom p{
+        font-size: 20px;
+    }
+}
