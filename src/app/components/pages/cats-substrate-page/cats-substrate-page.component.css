@@ -1,5 +1,5 @@
 .cats-substrate-page-content{
-    width: 98%; padding-top: 50px; height: 90%; display: flex; 
+    width: 98%; height: 90%; display: flex; margin-top: auto;
     justify-content: space-around; align-items: center;
 }
 .description{

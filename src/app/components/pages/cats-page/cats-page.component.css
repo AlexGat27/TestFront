@@ -7,6 +7,7 @@
     color: white;
     font-family: 'Roboto';
     width: 30%;
+    height: 90%;
 }
 
 .img-cats{
@@ -33,6 +34,7 @@
     }
     .description{
         width: 90%;
+        height: auto;
         text-align: center;
     }
     .img-cats{

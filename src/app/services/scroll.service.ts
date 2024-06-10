@@ -14,4 +14,7 @@ export class ScrollService {
   scrollBottom(){
     this.scrollTopSubject.next("bottom");
   }
+  scrollNext(){
+    this.scrollTopSubject.next("next");
+  }
 }

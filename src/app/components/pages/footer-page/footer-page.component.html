@@ -4,10 +4,8 @@ justify-content: center; align-items: center;">
 </div>
 <div class="circlesBottom">
     <p>Точки снизу должны быть всегда на равном расстоянии друг от друга.</p>
-    <div style="background-color: gray; width: 100%; height: 60px; overflow: hidden;">
-        <div style="width: fit-content; height: 100%; display: flex; 
-            justify-content: space-around; align-items: center;">
-            <div *ngFor="let _ of range; let i = index;" class="item"></div>    
-        </div>
+    <div style="background-color: gray; width: 100%; height: 60px; 
+    justify-content: space-around; align-items: center; display:flex">
+        <div *ngFor="let _ of range; let i = index;" class="item"></div>    
     </div>
 </div>

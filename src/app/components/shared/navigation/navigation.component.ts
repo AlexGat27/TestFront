@@ -13,4 +13,10 @@ export class NavigationComponent {
   scrollTop(){
     this.scrollService.scrollTop();
   }
+  scrollBottom(){
+    this.scrollService.scrollBottom();
+  }
+  scrollNext(){
+    this.scrollService.scrollNext();
+  }
 }

@@ -29,7 +29,7 @@ export class CardsPageComponent{
     });
   }
 
-  moveBottom(){
-    this.scrollService.scrollBottom();
+  moveNext(){
+    this.scrollService.scrollNext();
   }
 }

@@ -33,6 +33,9 @@ export class ContentComponent implements AfterViewInit{
         case "bottom":
           this.fullpageApi.moveTo(this.countSections);
           break;
+        case "next":
+          this.fullpageApi.moveSectionDown();
+          break;
         default:
           console.error("Такой команды нет");
           break;

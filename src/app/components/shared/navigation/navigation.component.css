@@ -36,7 +36,8 @@
     margin-left: 10px;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    cursor: pointer;
 }
 .block span{
     color: #333;
