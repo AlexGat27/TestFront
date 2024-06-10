@@ -50,3 +50,7 @@
     background-color: white;
     z-index: 1002;
 }
+.bottombtn:hover{
+  background-color: rgb(92, 255, 80);
+  border-color: black;
+}
